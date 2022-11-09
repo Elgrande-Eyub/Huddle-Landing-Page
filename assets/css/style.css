@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+* {
+    transition: all ease-in-out 0.4s;
+}
+
+:root {
+    --mainFont: 'Poppins', sans-serif;
+    --secondFont: 'Open Sans', sans-serif;
+}
+
+.Main {
+    background-image: url('/images/bg-hero-mobile.svg');
+    background-color: hsl(193, 100%, 96%);
+    /* mix-blend-mode: darken; */
+    height: auto;
+    width: 100%;
+    font-family: var(--mainFont);
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+
+/* Nav bar Style*/
+
+.Main__Content {
+    padding: 2rem;
+}
+
+.Main__NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NavBar__btn {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.NavBar__btn:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Hero section style */
+
+.Main__Hero {
+    padding: 2rem;
+    margin-top: 2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.Hero__desc {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.Hero__btn {
+    width: 80%;
+    margin: 3rem;
+    background-color: hsl(322, 100%, 66%);
+    color: white;
+}
+
+.Hero__img {
+    width: auto;
+}
+
+
+/* Products Sections Style */
+
+.Products {
+    padding: 2rem;
+    /* background-color: rgb(213, 213, 213); */
+}
+
+.Product__Card {
+    margin-top: 4rem;
+}
+
+.Card {
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    text-align: center;
+    align-items: center;
+    font-family: var(--mainFont);
+    margin-bottom: 2rem;
+}
+
+.Card__title {
+    margin-top: 4rem;
+    font-size: 1.7rem;
+}
+
+.Card__desc {
+    color: rgba(50, 50, 50, 0.551);
+    font-family: var(--secondFont);
+    line-height: 1.3;
+    letter-spacing: 1;
+}
+
+
+/* subscribe section Card */
+
+.Subscribe__Content {
+    background-color: white;
+    padding: 1.5rem;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    text-align: center;
+    align-items: center;
+    font-family: var(--mainFont);
+    margin-bottom: 2rem;
+}
+
+.Subscribe__title {
+    font-size: 1.2rem;
+}
+
+.Subscribe__btn {
+    width: 50%;
+    background-color: hsl(322, 100%, 66%);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+/* footer section Style */
+
+.Footer {
+    width: 100%;
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+}
+
+.Footer__Content {
+    font-family: var(--secondFont);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.Footer__img {
+    background-color: black;
+    mix-blend-mode: color;
+}
+
+.Footer__list li {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 0;
+}
+
+.Footer__list li img {
+    margin-right: 1rem;
+}
+
+.Footer__list--Second {
+    margin-top: 2rem;
+}
+
+.Footer__list--Second li {
+    padding: 0.6rem 0;
+}
+
+.Footer__list--Second li a {
+    text-decoration: none;
+    color: white;
+}
+
+.Copyrights__Content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--mainFont);
+}
+
+.Copyrights__Content p {
+    margin-bottom: 2rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+.Social__links {
+    margin-bottom: 2rem;
+}
+
+.Social__list {
+    display: flex;
+}
+
+.Social__list li {
+    padding: 0 1rem;
+}
+
+.Social__link span {
+    font-size: 2rem;
+}
+
+@media(min-width:720px) {
+    .Footer__Content {
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+    .Footer__img {
+        margin-bottom: 20px;
+    }
+    .Footer__Copyrights,
+    .Footer__list--Second,
+    .firstColumn {
+        display: grid;
+        place-content: center;
+    }
+}
+
+@media(min-width:1120px) {
+    .Main__Hero {
+        display: flex;
+        flex-direction: row;
+    }
+    .Hero__text {
+        display: grid;
+        margin-right: 2rem;
+        text-align: start;
+        place-content: center;
+        padding: 1rem;
+    }
+    .Card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    .Card__img {
+        max-width: 50%;
+    }
+    .Card__Text {
+        text-align: start;
+        max-width: 600px;
+    }
+    .Product__Card {
+        margin-bottom: 150px;
+    }
+    .Products {
+        position: relative;
+    }
+    .Product__Subscribe {
+        z-index: 2000;
+        position: absolute;
+        width: 60%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        box-shadow: none;
+        /* background-color: white; */
+        border-radius: 20px;
+    }
+    .Subscribe__Content {
+        display: flex;
+        flex-direction: column;
+    }
+    .Footer__Content {
+        padding-top: 200px;
+    }
+}
